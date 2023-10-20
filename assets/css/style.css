@@ -1,0 +1,47 @@
+main{
+    position: relative;
+    width: 760px;
+    height: 500px;
+    margin: 10px auto;
+    box-shadow: 0 0 10 #DBDBDB;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#janela1, #janela2{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 130px;
+}
+
+#janela1{
+    background-color: blue;
+    left: 10px;
+    cursor: pointer;
+}
+
+#janela2{
+    background-color: red;
+    cursor: pointer;
+    left: 180px;
+}
+/*quando colocar o hover ele vai parar do outro lado a 580px*/
+#janela1:hover + #janela2{
+    transition: all 0.5s ease-out;
+    left: 580px;
+    transform: rotate(360deg);
+}
+
+.janela3{
+    width: 150px;
+    background-color: coral;
+    height: 150px;
+}
+
+.janela3:hover{
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 10px;
+    background-color: darkgoldenrod;
+}
